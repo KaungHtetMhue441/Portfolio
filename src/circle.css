@@ -1,0 +1,80 @@
+.skill{
+    width: 160px;
+    height: 160px;
+    
+    position: relative;
+}
+.outer{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+padding:20px;
+box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+.inner{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+.circle{
+    fill:none;
+    stroke: rgb(34 211 238);;
+    stroke-width:20px;
+    stroke-dasharray:472;
+    stroke-dashoffset:472;
+}
+
+.ani-165{
+    animation: ani-165 2s linear forwards;
+}
+.ani-160{
+    animation: ani-160 2s linear forwards;
+
+}
+.ani-170{
+    animation: ani-170 2s linear forwards;
+
+}
+.ani-155{
+    animation: ani-155 2s linear forwards;
+
+}
+@keyframes ani-165 {
+    100%{
+        stroke-dashoffset: 165;
+    }
+}
+@keyframes ani-160 {
+    100%{
+        stroke-dashoffset: 160;
+    }
+}
+@keyframes ani-170 {
+    100%{
+        stroke-dashoffset: 170;
+    }
+}
+@keyframes ani-155 {
+    100%{
+        stroke-dashoffset: 155;
+    }
+}
+@keyframes ani-180 {
+    100%{
+        stroke-dashoffset: 180;
+    }
+}
+@keyframes ani-160 {
+    100%{
+        stroke-dashoffset: 160;
+    }
+}

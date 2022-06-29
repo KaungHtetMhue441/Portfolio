@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular Progress Bar</title>
+    <!-- Gooogle Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="circular-progress">
+        <div class="value-container">0%</div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+const sectionAll = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  const scrollY = window.pageYOffset;
+  sectionAll.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 100;
+    const sectionId = current.getAttribute('id');
+    console.log(sectionId);
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector('li a[href*="' + sectionId + '"]')
+        .classList.add('active');
+    } else {
+      document
+        .querySelector('li a[href*="' + sectionId + '"]')
+        .classList.remove('active');
+    }
+  });
+});
+
+
+
+width: 160px;
+    height: 160px;
+
+    width: 120px;
+    height: 120px;
+
+
+<div class="circular">
+  <div class="inner"></div>
+  <div class="outer"></div>
+  <div class="numb">
+     0%
+  </div>
+  <div class="circle">
+     <div class="dot">
+        <span></span>
+     </div>
+     <div class="bar left">
+        <div class="progress"></div>
+     </div>
+     <div class="bar right">
+        <div class="progress"></div>
+     </div>
+  </div>
+</div>
+<script>
+</script>
